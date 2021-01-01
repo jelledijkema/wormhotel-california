@@ -26,6 +26,7 @@ from textfiles import text_dict # selfmade python file with all the textboxes
 # %% Colors
 ## instigate the app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.YETI])
+server = app.server
 
 ## Make a hex colors database
 colors = {
