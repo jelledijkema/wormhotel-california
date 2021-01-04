@@ -485,7 +485,7 @@ def update_figure(GFT_aanbod_radio):
 #         )
 #     }
 
-# %%
+
 # This part is here so you can run the Python script from the Prompt
 if __name__ == '__main__':
     app.run_server(debug=True)
