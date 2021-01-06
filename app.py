@@ -52,7 +52,7 @@ month_order = ['January', 'February', 'March', 'April', 'May', 'June', 'July', '
 # ### 1.1 Read data
 
 # %% Data input
-## Read data sets
+## Read data sets (using URL's and/or direct CSV)
 url_GFT_aanbod = 'https://raw.githubusercontent.com/jelledijkema/wormhotel-california/master/Data/GFT_aanbod.csv'
 df_GFT_aanbod = pd.read_csv(url_GFT_aanbod,sep=",", encoding='unicode_escape', header=0)
 #df_GFT_aanbod = pd.read_csv('./data/GFT_aanbod.csv',sep=',', encoding='unicode_escape', header=0)
@@ -199,30 +199,26 @@ app.layout = html.Div(style={}, children=[
 
     # Titel textbox
     html.H1(
-        children='Welcome',
-        style={'color': colors['blue'],
+        children='Wormhotel California',
+        style={'color': colors['dark_orange'],
                'backgroundColor':colors['white'],
                'width':'100%',
                'margin-left':'5%',
-               'margin-top':'3%'
+               'margin-top':'3%',
+               'fontSize': 60
                }
     ),
     
-    ## Textbox
+    ## Welcome textbox
     html.Div(
-    dcc.Textarea(
-        id='textarea-example',
-        value=welcome_text,
-        style={'fontSize':24,
-               'textAlign': 'left',
+     dcc.Markdown(welcome_text),
+     style={'color': colors['blue'],
+               'backgroundColor':colors['white'],
+               'width':'90%',
                'margin-left':'5%',
-               'width': '90%',
-               'height': 420,
-               'overflow':'hidden', ## no scroll
-               'resize':'none', ## no resizeing option
-               'border':'none' ## no border
-              }
-        )
+               'margin-top':'3%'
+               }
+        
     ),
         
 

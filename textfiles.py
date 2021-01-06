@@ -1,5 +1,8 @@
 # %%
-welcome_text = """There are many benefits from having one wormhotel. The biggest motivation I have for maintaining and using one is to reduce the impact my household has on the environment. There are many resources out there that help you build a wormhotel, or you can buy one. What I personally missed was information on the potential impact I could achieve by having one.
+
+welcome_text = '''
+# Welcome
+There are many benefits from having one wormhotel. The biggest motivation I have for maintaining and using one is to reduce the impact my household has on the environment. There are many resources out there that help you build a wormhotel, or you can buy one. What I personally missed was information on the potential impact I could achieve by having one.
 
 My goal is to provide insights for anyone who is interested in learning more about the impact of having a worm hotel. This website aims to help to facilitate the question "What are the environmental benefits of having a worm hotel?" With this personal project I aim to add a data driven approach to the conversation.
 
@@ -8,7 +11,7 @@ Questions I hope to answer in this experimental environment:
  - How much "harvest" does it produce?
  - What are the relationships to environmental factors on the composting speed?
  - What is the conversion factor from OM --> yield of liquid and solid compost taking the environmental factors taken into account?
-"""
+'''
 
 
 # %%
