@@ -56,7 +56,10 @@ month_order = ['January', 'February', 'March', 'April', 'May', 'June', 'July', '
 url_GFT_aanbod = 'https://raw.githubusercontent.com/jelledijkema/wormhotel-california/master/Data/GFT_aanbod.csv'
 df_GFT_aanbod = pd.read_csv(url_GFT_aanbod,sep=",", encoding='unicode_escape', header=0)
 #df_GFT_aanbod = pd.read_csv('./data/GFT_aanbod.csv',sep=',', encoding='unicode_escape', header=0)
-df_environment = pd.read_csv('./data/Environment_wormhotel.csv',sep=',', encoding='unicode_escape', header=0)
+
+url_Environment = 'https://raw.githubusercontent.com/jelledijkema/wormhotel-california/master/Data/Environment_wormhotel.csv'
+df_environment = pd.read_csv(url_Environment,sep=",", encoding='unicode_escape', header=0)
+#df_environment = pd.read_csv('./data/Environment_wormhotel.csv',sep=',', encoding='unicode_escape', header=0)
 
 ## Read textfiles that are on display
 welcome_text = text_dict['welcome_text']
