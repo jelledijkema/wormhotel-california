@@ -2,15 +2,20 @@
 
 welcome_text = '''
 # Welcome
-There are many benefits from having one wormhotel. The biggest motivation I have for maintaining and using one is to reduce the impact my household has on the environment. There are many resources out there that help you build a wormhotel, or you can buy one. What I personally missed was information on the potential impact I could achieve by having one.
+[There are many benefits from having a wormhotel](https://wormfarmguru.com/reasons-start-worm-farm/). The biggest motivation I have for having one is to reduce the impact my household has on the environment by composting at home. 
 
-My goal is to provide insights for anyone who is interested in learning more about the impact of having a worm hotel. This website aims to help to facilitate the question "What are the environmental benefits of having a worm hotel?" With this personal project I aim to add a data driven approach to the conversation.
+So what are the environmental benefits of having a worm hotel? I found that this question is rarely answered in a quantitative way. With this personal project I want to add a data driven approach to the conversation.
 
-Questions I hope to answer in this experimental environment:
- - How much weight of Organic Matter can be offered to a worm hotel of a certain size?
- - How much "harvest" does it produce?
- - What are the relationships to environmental factors on the composting speed?
- - What is the conversion factor from OM --> yield of liquid and solid compost taking the environmental factors taken into account?
+This website aims to answer questions around the environmental benefits of a worm hotel by providing data that was measured in the worm hotel and the personal experiences I had by having and maintaining one. My goal is to provide insights for anyone who is interested in learning more about the impact of having a worm hotel. 
+
+The big question I hope to answer in this dashboard:
+ - How much CO2 emission did I prevent by having a worm hotel?
+
+Insights provided:
+ - How much weight of Organic Waste can be offered to a worm hotel of a certain size?
+ - How do environmental factors like temperature and humidity affect the decomposition?
+ - How much compost is left? 
+
 '''
 
 
