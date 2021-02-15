@@ -4,6 +4,8 @@ welcome_text = '''
 # Welcome
 [There are many benefits from having a wormhotel](https://wormfarmguru.com/reasons-start-worm-farm/). The biggest motivation I have for having one is to reduce the impact my household has on the environment by composting at home. 
 
+How much CO2 emission do I prevent by having a worm hotel?
+
 So what are the environmental benefits of having a worm hotel? I found that this question is rarely answered in a quantitative way. With this personal project I want to add a data driven approach to the conversation.
 
 This website aims to answer questions around the environmental benefits of a worm hotel by providing data that was measured in the worm hotel and the personal experiences I had by having and maintaining one. My goal is to provide insights for anyone who is interested in learning more about the impact of having a worm hotel. 

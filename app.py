@@ -7,6 +7,7 @@ import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 import pandas as pd
 from datetime import datetime
+from datetime import date
 import plotly.express as px
 import plotly.graph_objects as go
 import knmi
@@ -46,6 +47,37 @@ colors = {
 ## constants
 month_order = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 
                'November', 'December']
+
+
+# %%
+month_list = []
+Today = date.today()
+
+def fill_month_list(month_list):
+    
+    month_list.append(Today.strftime('%B'))
+    
+    new_month = Today
+    month_number = new_month.month
+    year_number = new_month.year
+    
+    while len(month_list) < 12:
+        
+        if month_number == 1:
+            year_number = year_number-1
+            month_number = 12
+            new_month = new_month.replace(month=month_number, year=year_number)
+        
+        else:
+            month_number=month_number-1
+            new_month = new_month.replace(month=month_number)
+            
+        month_list.append(new_month.strftime('%B'))
+        
+    month_list.reverse()
+    return (month_list)
+
+month_list = fill_month_list(month_list)
 
 
 # %% [markdown]
@@ -278,9 +310,9 @@ app.layout = html.Div(style={}, children=[
                                     ,options=[
                                         {'label': 'Week', 'value': 'Week'}
                                         ,{'label': 'Month', 'value': 'Month'}
-#                                         ,{'label': 'Year', 'value': 'Year'}
+                                        ,{'label': 'Year', 'value': 'Year'}
                                             ]
-                                    ,value='Month'
+                                    ,value='Year'
                                     ,style={'display': 'inline-block',
                                             'margin-left': '5%',
                                             'fontSize':20}
@@ -392,8 +424,10 @@ app.layout = html.Div(style={}, children=[
 def update_figure(GFT_aanbod_radio):
     '''explanation graph'''
     
-    if GFT_aanbod_radio == 'Month':
-        df_GFT_aanbod_custom = df_GFT_aanbod.groupby(['Month']).sum().reindex(month_order, axis=0)
+    if GFT_aanbod_radio == 'Year':
+        df_GFT_aanbod_custom = df_GFT_aanbod.groupby(['Year']).sum().reindex(axis=0)
+    elif GFT_aanbod_radio == 'Month':
+        df_GFT_aanbod_custom = df_GFT_aanbod.groupby(['Month']).sum().reindex(month_list,axis=0)
     else:
         df_GFT_aanbod_custom = df_GFT_aanbod.groupby([GFT_aanbod_radio]).sum()
     
